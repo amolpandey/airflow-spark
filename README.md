@@ -30,10 +30,42 @@ This project is designed to setup the Apache Airflow and spark containers in the
     ```
 
 - Debug: In case any container is not starting up or for any build errors the following command comes in handy to debug as the progressigve version introduces any breaking changes
-```
-docker run -it --entrypoint /bin/sh --user root  <<docker image ID>>
-```
+    ```
+    docker run -it --entrypoint /bin/sh --user root  <<docker image ID>>
+    ```
 
 ## Outcome
+
+Now post the above services are all up and running the following can be observed:
+
+- Running Container & Volume
+    ![Running Containers](img/Docker_Desktop_C0yfGbIUsG.png)
+    **Note:** The airflow-init container will remain in the stopped state as its used only  for intialization purposes. 
+    ![Running Volume](img/Docker_Desktop_vuRN9y7DWt.png)
+
+- Airflow UI (Username: airflow | Password: airflow) <br/>
+    URL: [http://localhost:8080/](http://localhost:8080/) <br/> 
+    DAG: spark_airflow 
+    ![Airflow UI](img/msedge_FNSY03akWp.png)
+
+    The above DAG is located in your cloned project (dags) folder and the associated spark submit jobs are located in the respective folders within (jobs) folder.
+
+    ![Code Location](img/Code_5ysncJZdSb.png)
+
+    Now the folders config/dags/jobs/logs/plugins are mapped to running containers from your project so any updated and changes to above are reflective in your workspace and running services, helping development. 
+
+    ![Folder mounts](img/Docker_Desktop_ASLsLYTXBA.png)
+
+- Airflow to Spark Connection for Job Submission
+    ![Spark Connection](img/msedge_o19vbz18OS.png)
+
+- DAG run outcome
+    ![Dag Overview](img/BV7ZDtpg7Y.png)
+    ![Dag Logs](img/msedge_tfkQ4jgjzR.png)
+
+- Spark UI<br/>
+  URL: [http://localhost:9090/](http://localhost:9090/)
+
+  ![Spark UI](img/msedge_zQ2tfJaMnD.png)
 
 
