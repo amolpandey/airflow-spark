@@ -43,7 +43,7 @@ Now post the above services are all up and running the following can be observed
     **Note:** The airflow-init container will remain in the stopped state as its used only  for intialization purposes. 
     ![Running Volume](img/Docker_Desktop_vuRN9y7DWt.png)
 
-- Airflow UI (Username: airflow | Password: airflow) <br/>
+- Airflow UI (*Username: airflow* | *Password: airflow*) <br/>
     URL: [http://localhost:8080/](http://localhost:8080/) <br/> 
     DAG: spark_airflow 
     ![Airflow UI](img/msedge_FNSY03akWp.png)
