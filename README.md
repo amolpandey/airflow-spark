@@ -1,6 +1,6 @@
 # Airflow & Spark Cluster setup with sample DAG and Spark Submit
 
-This is a sample project illustrating how we can setup and Apache Airflow and spark cluster on docker desktop with DAG's submitting codebase in multiple languages like Python Scala and Java submissions to the Spark cluster, illustrating an enterprise setup. 
+This is a sample project illustrating how we can setup and Apache Airflow and spark cluster on docker desktop with DAG's submitting codebase in multiple languages like Python, Scala and Java submissions to the Spark cluster, illustrating an enterprise setup. 
 
 ## Description
 
@@ -14,7 +14,7 @@ This project is designed to setup the Apache Airflow and spark containers in the
     python.exe -m pip install --upgrade pip
     ```
 
-- Build the customized image of the Airflow with the neccesary packages and components installed to interacti with the Spark cluster
+- Build the customized image of the Airflow with the neccesary packages and components installed to interact with the Spark cluster
     ```
     docker compose build
     ```
@@ -68,4 +68,7 @@ Now post the above services are all up and running the following can be observed
 
   ![Spark UI](img/msedge_zQ2tfJaMnD.png)
 
+## Refrences
 
+[Airflow - Running Airflow in Docker](https://airflow.apache.org/docs/apache-airflow/2.3.2/start/docker.html)
+[Airflow - Compose YAML](https://airflow.apache.org/docs/apache-airflow/2.10.5/docker-compose.yaml)
